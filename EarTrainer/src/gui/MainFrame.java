@@ -6,6 +6,7 @@
 package gui;
 
 import music.MidiPlayer;
+import music.NoteMap;
 
 /**
  *
@@ -133,6 +134,7 @@ public class MainFrame extends javax.swing.JFrame {
                 new MainFrame().setVisible(true);
             }
         });
+        NoteMap instance=NoteMap.getMap();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
