@@ -25,7 +25,10 @@ public class NoteMap {
 
         /*
          * Logic for creating the note map goes here.
+         * One way of implementing it is going from 0 key to 120 key.
+         * But this way is more understandable, starting with middle C(note-60) and going down and going up from there.
          */
+
         int j=11;
         int k=5;
         for(int i=MIDDLE_C;i>0;i--){
@@ -54,7 +57,11 @@ public class NoteMap {
             }
         }
     }
-    
+
+    /*
+    * This class is a Singleton class
+    * It prevents creating the map more than once.
+    */
     public static NoteMap getMap(){
         if(instance==null){
             return instance=new NoteMap();

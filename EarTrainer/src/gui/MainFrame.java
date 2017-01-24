@@ -6,7 +6,6 @@
 package gui;
 
 import music.MidiPlayer;
-import music.NoteMap;
 
 /**
  *
@@ -97,8 +96,8 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
-        MidiPlayer player=new MidiPlayer();
-        player.start((int) rangeSpinner.getValue());
+        MidiPlayer player=MidiPlayer.getPlayer();
+        player.startNewQuestion((int) rangeSpinner.getValue());
     }//GEN-LAST:event_startButtonActionPerformed
 
     /**
@@ -134,7 +133,6 @@ public class MainFrame extends javax.swing.JFrame {
                 new MainFrame().setVisible(true);
             }
         });
-        NoteMap instance=NoteMap.getMap();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
